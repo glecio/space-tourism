@@ -118,7 +118,7 @@ select {
 /* Select all itens that does not have sibling before - other way  *:not(:first-child) */
 .flow > * + *  {
     margin-top: var(--flow-space, 1rem);
-    outline: 1px solid red;
+    /*outline: 1px solid red;*/
 }
 
 .container {
@@ -240,4 +240,25 @@ select {
 .primary-navigation a > span {
     font-weight: 700;
     margin-right: .5em;
+}
+
+.underline-indicators > * {
+    padding: var(--underline-gap, 1rem) 0;
+    border: 0;
+    border-bottom: .2rem solid hsl( var(--clr-white) / 0 );
+}
+
+.underline-indicators > *:hover,
+.underline-indicators > *:focus {
+    border-color: hsl( var(--clr-white) / .5);
+}
+
+.underline-indicators > .active,
+.underline-indicators > [aria-selected="true"] {
+    color: hsl( var(--clr-white) / 1);
+    border-color: hsl( var(--clr-white) / 1);
+}
+
+.tab-list {
+    --gap: 2rem;
 }
